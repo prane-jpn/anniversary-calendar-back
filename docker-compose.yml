@@ -1,0 +1,17 @@
+# docker compose for development
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14.0
+    environment:
+      - POSTGRES_USER=onboard
+      - POSTGRES_PASSWORD=5Dms9nseP
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:
